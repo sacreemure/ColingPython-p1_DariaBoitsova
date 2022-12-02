@@ -12,11 +12,11 @@ class FileReader():
         newfile = open('addresult.txt', mode='w+', encoding='utf-8')
         try:
             with open(self.path, encoding='utf-8') as f:
-                text = f.readlines()
-                newfile.writelines(text)
+                for line in f:
+                    newfile.write(line)
             with open(other.path, encoding='utf-8') as g:
-                text_2 = g.readlines()
-                newfile.writelines(text_2)
+                for line in g:
+                    newfile.write(line)
             newfile.close()
             return FileReader('addresult.txt')
         except FileNotFoundError:
@@ -28,9 +28,8 @@ class FileReader():
     def read(self):
         try:
             with open(self.path, encoding='utf-8') as f:
-                text = f.readlines()
-                for i in text:
-                    print(i)
+                for line in f:
+                    print(line)
         except FileNotFoundError:
             print('There is no such file in your directory!')
             return('')
@@ -54,7 +53,3 @@ class FileReader():
                     self.word_count += len(word_tokenize(line))
         except FileNotFoundError:
             print('There is no such file in your directory!')
-
-
-
-
