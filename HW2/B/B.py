@@ -1,12 +1,11 @@
 def solution(x):
-    if i % 3:
-        
-    return
-
-x = 'In the hole in the ground there lived 1 hobbit'
-
-'''
-% 3
-h - H .upper
-1 - one .replace()
-'''
+    x = x.replace("h", "H")
+    
+    oldstring = x
+    newstring = ""
+    for i in range (0, len(oldstring)):
+        if i % 3 != 0:
+            newstring = newstring + oldstring[i]
+            
+    newstring = newstring.replace(1, "one")
+    return newstring
