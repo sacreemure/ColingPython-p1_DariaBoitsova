@@ -1,8 +1,8 @@
 def solution(a, b):
     new_arr = []
-    return new_arr.concatenate(a, b)
+    
+    for i in a and b:
+        if i in a and b:
+            return new_arr.append(i)
+   
 
-#unite arrays
-#a+b but if i in a==b
-a = [1, 1, 2, 5]
-b = [1, 3, 4, 5, 8]
