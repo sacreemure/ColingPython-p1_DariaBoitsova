@@ -1,4 +1,4 @@
-import nltk
+from nltk import word_tokenize
 
 class FileReader:
   def __init__(self, path):
