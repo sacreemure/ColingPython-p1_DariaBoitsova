@@ -1,4 +1,5 @@
-from typing import List
+import pickle
+from tqdm import tqdm
 
 class UnigramMorphAnalyzer:
   def __init__(self):
@@ -23,4 +24,4 @@ class UnigramMorphAnalyzer:
 if __name__ == "__main__":
   tagger = UnigramMorphAnalyzer()
   
-  tagger.train(X=["прыгать", "яблоко"], y=["NOUN", "VERB"])
+
