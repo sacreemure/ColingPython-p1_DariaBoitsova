@@ -63,10 +63,4 @@ class UnigramMorphAnalyzer:
         return correct / len(y)
 
 if __name__ == '__main__':
-    tagger = UnigramMorphAnalyzer()
-    #tagger.train()
-    tagger.save()
-    tagger.load()
-    print(tagger.predict('спать'))
-    print(tagger['ть'])
-    print(tagger.eval())
+    pass
