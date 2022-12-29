@@ -5,7 +5,7 @@ class FileReader:
     self.path = path
   
   
-   def __add__(self, other):
+  def __add__(self, other):
       newfile = open('addresult.txt')
       with open(newfile, 'w') as i:
         for line in i:
@@ -13,22 +13,22 @@ class FileReader:
       with open(other.path, 'w') as f:
         for line in f:
           newfile.write(line)
-    return FileReader(newfile)
+      return FileReader(newfile)
 
-    
   def __str__(self):
     return f'{self.path}'
   
-  
   def read(self):
-    with open(self.path) as read_file:
-      return read_file.read()
+    try:
+      with open(self.path) as read_file:
+        return read_file.read()
     except FileNotFoundError:
       return ''
   
   def write(self):
-    with open(self.path, 'w') as write_file:
-      write_file.write()
+    try:
+      with open(self.path, 'w') as write_file:
+        write_file.write()
     except FileNotFoundError:
       return ''
     
@@ -39,6 +39,3 @@ class FileReader:
       l_count += 1
       w_count += len(nltk.word_tokenize(line))
     return l_count, w_count
- 
-
-
