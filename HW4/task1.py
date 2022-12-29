@@ -9,7 +9,7 @@ class Planet(SpaceObject):
         self.population = population or 0
     
     def __str__(self):
-        return f'Population of {self.name} = {self.population}
+        return f'Population of {self.name} = {self.population}'
 
 
 class Animal:
