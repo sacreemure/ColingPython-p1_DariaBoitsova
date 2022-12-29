@@ -51,7 +51,7 @@ class UnigramMorphAnalyzer:
                 final_stats[tag] = probability
         except KeyError:
             return {0: 0}
-        return dict(sorted(final_stats.items(), key=lambda item: item[1], reverse=True))
+        return sorted(final_stats.items(), key=lambda item: item[1], reverse=True))
        
 
     def eval(self, x, y):
