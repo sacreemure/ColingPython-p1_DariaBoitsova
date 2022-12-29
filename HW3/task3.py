@@ -28,7 +28,7 @@ class UnigramMorphAnalyzer:
     def predict(self, token: str):
        
 
-    def eval(self, x=None, y=None):
+    def eval(self, x, y):
         
 
 if __name__ == '__main__':
