@@ -63,4 +63,4 @@ class UnigramMorphAnalyzer:
         return correct / len(y)
 
 if __name__ == '__main__':
-    pass
+    tagger = UnigramMorphAnalyzer()
