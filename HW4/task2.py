@@ -1,25 +1,16 @@
-class ReverseIter(object):
+class ReverseIter():
 
-    def __init__(self, items: list):
-        self.items = items
-        self.num = 0
+    def __init__(self, array='list'):
+        self.array = array
+        self.i = 0
 
     def __iter__(self):
         return self
 
     def __next__(self):
-        while self.num < len(self.items):
-            num = -(self.num + 1)
-            self.num += 1
-            return self.items[num]
+        while self.i < len(self.array):
+            n = -(self.i + 1)
+            self.i += 1
+            return self.array[n]
         else:
-            raise StopIteration
-        
-      
-        
-it = ReverseIter([10, 54, 12, 0])
-print(next(it))
-print(next(it))
-print(next(it))
-print(next(it))
-print(next(it))
+            raise StopIteration()
